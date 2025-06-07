@@ -24,7 +24,7 @@ export function Dashboard() {
       change: "+3.1%",
       trend: "up",
       icon: TrendingUp,
-      description: "Avg. across all clusters"
+      description: t("avgAcrossAllClusters")
     },
     {
       title: t("autoAssignments"),
@@ -32,15 +32,15 @@ export function Dashboard() {
       change: "+45",
       trend: "up",
       icon: Zap,
-      description: "This week"
+      description: t("thisWeek")
     },
     {
-      title: "Active Clients",
+      title: t("activeClients"),
       value: "89",
       change: "+8",
       trend: "up",
       icon: Users,
-      description: "Multi-language support"
+      description: t("multiLanguageSupport")
     }
   ];
 
@@ -60,7 +60,7 @@ export function Dashboard() {
         </div>
         <Badge variant="outline" className="gap-2">
           <div className="h-2 w-2 bg-green-500 rounded-full"></div>
-          All Systems Operational
+          {t("allSystemsOperational")}
         </Badge>
       </div>
 
@@ -86,8 +86,8 @@ export function Dashboard() {
       <div className="grid gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle className={isRTL ? 'text-right' : ''}>Top Performing Clusters</CardTitle>
-            <CardDescription className={isRTL ? 'text-right' : ''}>Content performance by cluster segmentation</CardDescription>
+            <CardTitle className={isRTL ? 'text-right' : ''}>{t("topPerformingClusters")}</CardTitle>
+            <CardDescription className={isRTL ? 'text-right' : ''}>{t("contentPerformanceByCluster")}</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -116,7 +116,7 @@ export function Dashboard() {
         <Card>
           <CardHeader>
             <CardTitle className={isRTL ? 'text-right' : ''}>{t("recentActivity")}</CardTitle>
-            <CardDescription className={isRTL ? 'text-right' : ''}>Staff automatically assigned by cluster matching</CardDescription>
+            <CardDescription className={isRTL ? 'text-right' : ''}>{t("staffAutomaticallyAssigned")}</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">

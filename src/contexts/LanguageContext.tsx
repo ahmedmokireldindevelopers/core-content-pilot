@@ -50,7 +50,42 @@ const translations = {
     
     // Assignments
     assignmentsTitle: "Auto Assignments",
-    workflowAutomation: "Workflow Automation"
+    workflowAutomation: "Workflow Automation",
+    
+    // Additional translations
+    activeClients: "Active Clients",
+    multiLanguageSupport: "Multi-language support",
+    thisWeek: "This week",
+    avgAcrossAllClusters: "Avg. across all clusters",
+    allSystemsOperational: "All Systems Operational",
+    topPerformingClusters: "Top Performing Clusters",
+    contentPerformanceByCluster: "Content performance by cluster segmentation",
+    staffAutomaticallyAssigned: "Staff automatically assigned by cluster matching",
+    smartSuggestions: "Smart Suggestions",
+    aiGeneratedRecommendations: "AI-generated content recommendations based on cluster performance",
+    contentClustersOverview: "Content Clusters Overview",
+    performanceMetricsByGroup: "Performance metrics by content grouping",
+    autoCusterContent: "Auto-Cluster Content",
+    createCluster: "Create Cluster",
+    viewDetails: "View Details",
+    createContent: "Create Content",
+    relevance: "Relevance",
+    totalTraffic: "Total Traffic",
+    monthlyUniqueVisitors: "Monthly unique visitors",
+    avgConversionRate: "Avg. Conversion Rate",
+    acrossAllClusters: "Across all clusters",
+    activeClusters: "Active Clusters",
+    contentGroupings: "Content groupings",
+    newThisMonth: "new this month",
+    fromLastMonth: "from last month",
+    trafficByCluster: "Traffic by Cluster",
+    monthlyVisitorsAndConversion: "Monthly visitors and conversion rates",
+    conversionDistribution: "Conversion Distribution",
+    conversionRatesByCluster: "Conversion rates by cluster",
+    trafficTrends: "Traffic Trends",
+    sixMonthPerformance: "6-month performance by top clusters",
+    lastSixMonths: "Last 6 Months",
+    realTimeData: "Real-time Data"
   },
   ar: {
     // App title
@@ -92,7 +127,42 @@ const translations = {
     
     // Assignments
     assignmentsTitle: "التعيينات التلقائية",
-    workflowAutomation: "أتمتة سير العمل"
+    workflowAutomation: "أتمتة سير العمل",
+    
+    // Additional translations
+    activeClients: "العملاء النشطون",
+    multiLanguageSupport: "دعم متعدد اللغات",
+    thisWeek: "هذا الأسبوع",
+    avgAcrossAllClusters: "المتوسط عبر جميع المجموعات",
+    allSystemsOperational: "جميع الأنظمة تعمل",
+    topPerformingClusters: "أفضل المجموعات أداءً",
+    contentPerformanceByCluster: "أداء المحتوى حسب تجميع المجموعات",
+    staffAutomaticallyAssigned: "الموظفون المعينون تلقائياً بمطابقة المجموعات",
+    smartSuggestions: "الاقتراحات الذكية",
+    aiGeneratedRecommendations: "توصيات المحتوى المولدة بالذكاء الاصطناعي بناءً على أداء المجموعات",
+    contentClustersOverview: "نظرة عامة على مجموعات المحتوى",
+    performanceMetricsByGroup: "مقاييس الأداء حسب تجميع المحتوى",
+    autoCusterContent: "تجميع المحتوى تلقائياً",
+    createCluster: "إنشاء مجموعة",
+    viewDetails: "عرض التفاصيل",
+    createContent: "إنشاء محتوى",
+    relevance: "الصلة",
+    totalTraffic: "إجمالي الزيارات",
+    monthlyUniqueVisitors: "الزوار الفريدون الشهريون",
+    avgConversionRate: "متوسط معدل التحويل",
+    acrossAllClusters: "عبر جميع المجموعات",
+    activeClusters: "المجموعات النشطة",
+    contentGroupings: "تجميعات المحتوى",
+    newThisMonth: "جديد هذا الشهر",
+    fromLastMonth: "من الشهر الماضي",
+    trafficByCluster: "الزيارات حسب المجموعة",
+    monthlyVisitorsAndConversion: "الزوار الشهريون ومعدلات التحويل",
+    conversionDistribution: "توزيع التحويل",
+    conversionRatesByCluster: "معدلات التحويل حسب المجموعة",
+    trafficTrends: "اتجاهات الزيارات",
+    sixMonthPerformance: "الأداء لمدة 6 أشهر حسب أفضل المجموعات",
+    lastSixMonths: "آخر 6 أشهر",
+    realTimeData: "بيانات في الوقت الفعلي"
   }
 };
 

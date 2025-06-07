@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from "recharts";
@@ -39,47 +40,47 @@ export function Analytics() {
           <p className="text-muted-foreground">{t("performanceMetrics")}</p>
         </div>
         <div className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
-          <Badge variant="outline">Last 6 Months</Badge>
-          <Badge variant="outline">Real-time Data</Badge>
+          <Badge variant="outline">{t("lastSixMonths")}</Badge>
+          <Badge variant="outline">{t("realTimeData")}</Badge>
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
         <Card>
           <CardHeader>
-            <CardTitle className={isRTL ? 'text-right' : ''}>Total Traffic</CardTitle>
-            <CardDescription className={isRTL ? 'text-right' : ''}>Monthly unique visitors</CardDescription>
+            <CardTitle className={isRTL ? 'text-right' : ''}>{t("totalTraffic")}</CardTitle>
+            <CardDescription className={isRTL ? 'text-right' : ''}>{t("monthlyUniqueVisitors")}</CardDescription>
           </CardHeader>
           <CardContent className={isRTL ? 'text-right' : ''}>
             <div className="text-3xl font-bold">142.8K</div>
             <div className={`flex items-center text-sm text-green-600 mt-1 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
-              <span>+18.2% from last month</span>
+              <span>+18.2% {t("fromLastMonth")}</span>
             </div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle className={isRTL ? 'text-right' : ''}>Avg. Conversion Rate</CardTitle>
-            <CardDescription className={isRTL ? 'text-right' : ''}>Across all clusters</CardDescription>
+            <CardTitle className={isRTL ? 'text-right' : ''}>{t("avgConversionRate")}</CardTitle>
+            <CardDescription className={isRTL ? 'text-right' : ''}>{t("acrossAllClusters")}</CardDescription>
           </CardHeader>
           <CardContent className={isRTL ? 'text-right' : ''}>
             <div className="text-3xl font-bold">23.6%</div>
             <div className={`flex items-center text-sm text-green-600 mt-1 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
-              <span>+2.4% from last month</span>
+              <span>+2.4% {t("fromLastMonth")}</span>
             </div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle className={isRTL ? 'text-right' : ''}>Active Clusters</CardTitle>
-            <CardDescription className={isRTL ? 'text-right' : ''}>Content groupings</CardDescription>
+            <CardTitle className={isRTL ? 'text-right' : ''}>{t("activeClusters")}</CardTitle>
+            <CardDescription className={isRTL ? 'text-right' : ''}>{t("contentGroupings")}</CardDescription>
           </CardHeader>
           <CardContent className={isRTL ? 'text-right' : ''}>
             <div className="text-3xl font-bold">24</div>
             <div className={`flex items-center text-sm text-blue-600 mt-1 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
-              <span>3 new this month</span>
+              <span>3 {t("newThisMonth")}</span>
             </div>
           </CardContent>
         </Card>
@@ -88,8 +89,8 @@ export function Analytics() {
       <div className="grid gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle className={isRTL ? 'text-right' : ''}>Traffic by Cluster</CardTitle>
-            <CardDescription className={isRTL ? 'text-right' : ''}>Monthly visitors and conversion rates</CardDescription>
+            <CardTitle className={isRTL ? 'text-right' : ''}>{t("trafficByCluster")}</CardTitle>
+            <CardDescription className={isRTL ? 'text-right' : ''}>{t("monthlyVisitorsAndConversion")}</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="chart-container">
@@ -108,8 +109,8 @@ export function Analytics() {
 
         <Card>
           <CardHeader>
-            <CardTitle className={isRTL ? 'text-right' : ''}>Conversion Distribution</CardTitle>
-            <CardDescription className={isRTL ? 'text-right' : ''}>Conversion rates by cluster</CardDescription>
+            <CardTitle className={isRTL ? 'text-right' : ''}>{t("conversionDistribution")}</CardTitle>
+            <CardDescription className={isRTL ? 'text-right' : ''}>{t("conversionRatesByCluster")}</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="chart-container">
@@ -137,8 +138,8 @@ export function Analytics() {
 
       <Card>
         <CardHeader>
-          <CardTitle className={isRTL ? 'text-right' : ''}>Traffic Trends</CardTitle>
-          <CardDescription className={isRTL ? 'text-right' : ''}>6-month performance by top clusters</CardDescription>
+          <CardTitle className={isRTL ? 'text-right' : ''}>{t("trafficTrends")}</CardTitle>
+          <CardDescription className={isRTL ? 'text-right' : ''}>{t("sixMonthPerformance")}</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="chart-container">
