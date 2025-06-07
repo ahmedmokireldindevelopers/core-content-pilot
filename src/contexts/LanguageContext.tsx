@@ -34,7 +34,6 @@ const translations = {
     conversionRate: "Conversion Rate",
     revenueThisMonth: "Revenue This Month",
     recentActivity: "Recent Auto-Assignments",
-    autoAssignments: "Auto-Assignments",
     
     // Content Clustering
     contentClusteringTitle: "Content Clustering",
@@ -117,7 +116,6 @@ const translations = {
     conversionRate: "معدل التحويل",
     revenueThisMonth: "الإيرادات هذا الشهر",
     recentActivity: "التعيينات التلقائية الأخيرة",
-    autoAssignments: "التعيينات التلقائية",
     
     // Content Clustering
     contentClusteringTitle: "تجميع المحتوى",
