@@ -8,9 +8,11 @@ import { Analytics } from "@/components/Analytics";
 import { SalesSegmentation } from "@/components/SalesSegmentation";
 import { AutoAssignments } from "@/components/AutoAssignments";
 import { UniversalSearch } from "@/components/UniversalSearch";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
   const [activeModule, setActiveModule] = useState("dashboard");
+  const { language } = useLanguage();
 
   const renderActiveModule = () => {
     switch (activeModule) {
@@ -31,7 +33,7 @@ const Index = () => {
 
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-background">
+      <div className={`min-h-screen flex w-full bg-background ${language === 'ar' ? 'sidebar-container' : ''}`}>
         <AppSidebar activeModule={activeModule} setActiveModule={setActiveModule} />
         <main className="flex-1 flex flex-col">
           <UniversalSearch />

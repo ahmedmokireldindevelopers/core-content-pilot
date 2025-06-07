@@ -3,19 +3,23 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { TrendingUp, Users, FileText, Target, Brain, Zap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Dashboard() {
+  const { t, language } = useLanguage();
+  const isRTL = language === 'ar';
+
   const metrics = [
     {
-      title: "Content Clusters",
+      title: t("totalContent"),
       value: "24",
       change: "+12%",
       trend: "up",
       icon: Brain,
-      description: "Active content groups"
+      description: t("activeCampaigns")
     },
     {
-      title: "Conversion Rate",
+      title: t("conversionRate"),
       value: "18.2%",
       change: "+3.1%",
       trend: "up",
@@ -23,7 +27,7 @@ export function Dashboard() {
       description: "Avg. across all clusters"
     },
     {
-      title: "Auto-Assignments",
+      title: t("autoAssignments"),
       value: "156",
       change: "+45",
       trend: "up",
@@ -49,9 +53,9 @@ export function Dashboard() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Dashboard Overview</h1>
+      <div className={`flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
+        <div className={isRTL ? 'text-right' : ''}>
+          <h1 className="text-3xl font-bold tracking-tight">{t("dashboardTitle")}</h1>
           <p className="text-muted-foreground">Smart content clustering and CRM analytics</p>
         </div>
         <Badge variant="outline" className="gap-2">
@@ -63,15 +67,15 @@ export function Dashboard() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {metrics.map((metric) => (
           <Card key={metric.title}>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">{metric.title}</CardTitle>
+            <CardHeader className={`flex flex-row items-center justify-between space-y-0 pb-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
+              <CardTitle className={`text-sm font-medium ${isRTL ? 'text-right' : ''}`}>{metric.title}</CardTitle>
               <metric.icon className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
-            <CardContent>
+            <CardContent className={isRTL ? 'text-right' : ''}>
               <div className="text-2xl font-bold">{metric.value}</div>
               <p className="text-xs text-muted-foreground">{metric.description}</p>
-              <div className="flex items-center text-xs text-green-600 mt-1">
-                <TrendingUp className="h-3 w-3 mr-1" />
+              <div className={`flex items-center text-xs text-green-600 mt-1 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
+                <TrendingUp className={`h-3 w-3 ${isRTL ? 'ml-1' : 'mr-1'}`} />
                 {metric.change}
               </div>
             </CardContent>
@@ -82,17 +86,17 @@ export function Dashboard() {
       <div className="grid gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle>Top Performing Clusters</CardTitle>
-            <CardDescription>Content performance by cluster segmentation</CardDescription>
+            <CardTitle className={isRTL ? 'text-right' : ''}>Top Performing Clusters</CardTitle>
+            <CardDescription className={isRTL ? 'text-right' : ''}>Content performance by cluster segmentation</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               {topClusters.map((cluster, index) => (
                 <div key={cluster.name} className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="space-y-1">
+                  <div className={`flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <div className={`space-y-1 ${isRTL ? 'text-right' : ''}`}>
                       <p className="text-sm font-medium">{cluster.name}</p>
-                      <div className="flex gap-4 text-xs text-muted-foreground">
+                      <div className={`flex gap-4 text-xs text-muted-foreground ${isRTL ? 'flex-row-reverse' : ''}`}>
                         <span>{cluster.traffic} visits</span>
                         <span>{cluster.conversion}% conversion</span>
                         <span>{cluster.articles} articles</span>
@@ -111,8 +115,8 @@ export function Dashboard() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Recent Auto-Assignments</CardTitle>
-            <CardDescription>Staff automatically assigned by cluster matching</CardDescription>
+            <CardTitle className={isRTL ? 'text-right' : ''}>{t("recentActivity")}</CardTitle>
+            <CardDescription className={isRTL ? 'text-right' : ''}>Staff automatically assigned by cluster matching</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -122,10 +126,10 @@ export function Dashboard() {
                 { client: "FinanceFlow", cluster: "Financial", staff: "Mike Johnson", time: "12 min ago" },
                 { client: "MarketPro Agency", cluster: "Marketing", staff: "Lisa Wang", time: "18 min ago" }
               ].map((assignment, index) => (
-                <div key={index} className="flex items-center justify-between py-2">
-                  <div className="space-y-1">
+                <div key={index} className={`flex items-center justify-between py-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <div className={`space-y-1 ${isRTL ? 'text-right' : ''}`}>
                     <p className="text-sm font-medium">{assignment.client}</p>
-                    <div className="flex gap-2">
+                    <div className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                       <Badge variant="outline" className="text-xs">{assignment.cluster}</Badge>
                       <span className="text-xs text-muted-foreground">→ {assignment.staff}</span>
                     </div>

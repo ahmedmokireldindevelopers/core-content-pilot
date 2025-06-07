@@ -4,8 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Brain, Link, TrendingUp, FileText, Plus, Sparkles } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function ContentClustering() {
+  const { t, language } = useLanguage();
+  const isRTL = language === 'ar';
+
   const clusters = [
     {
       name: "Technology Solutions",
@@ -71,12 +75,12 @@ export function ContentClustering() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Content Clustering</h1>
-          <p className="text-muted-foreground">Smart content suggestions and cluster analytics</p>
+      <div className={`flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
+        <div className={isRTL ? 'text-right' : ''}>
+          <h1 className="text-3xl font-bold tracking-tight">{t("contentClusteringTitle")}</h1>
+          <p className="text-muted-foreground">{t("smartClustering")}</p>
         </div>
-        <div className="flex gap-2">
+        <div className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
           <Button variant="outline" className="gap-2">
             <Brain className="h-4 w-4" />
             Auto-Cluster Content
@@ -91,35 +95,35 @@ export function ContentClustering() {
       <div className="grid gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+            <CardTitle className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
               <Sparkles className="h-5 w-5 text-yellow-500" />
               Smart Suggestions
             </CardTitle>
-            <CardDescription>AI-generated content recommendations based on cluster performance</CardDescription>
+            <CardDescription className={isRTL ? 'text-right' : ''}>AI-generated content recommendations based on cluster performance</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               {suggestions.map((suggestion, index) => (
                 <div key={index} className="border rounded-lg p-4 space-y-3">
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-1">
+                  <div className={`flex items-start justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <div className={`space-y-1 ${isRTL ? 'text-right' : ''}`}>
                       <h4 className="font-medium text-sm">{suggestion.title}</h4>
-                      <div className="flex gap-2">
+                      <div className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                         <Badge variant="secondary" className="text-xs">{suggestion.cluster}</Badge>
                         <Badge variant="outline" className="text-xs">{suggestion.type}</Badge>
                       </div>
                     </div>
-                    <div className="text-right">
+                    <div className={`text-right ${isRTL ? 'text-left' : ''}`}>
                       <div className="text-sm font-medium text-green-600">{suggestion.relevance}%</div>
                       <div className="text-xs text-muted-foreground">Relevance</div>
                     </div>
                   </div>
-                  <div className="flex flex-wrap gap-1">
+                  <div className={`flex flex-wrap gap-1 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     {suggestion.keywords.map((keyword) => (
                       <Badge key={keyword} variant="outline" className="text-xs">{keyword}</Badge>
                     ))}
                   </div>
-                  <div className="flex gap-2">
+                  <div className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <Button size="sm" variant="outline" className="flex-1">View Details</Button>
                     <Button size="sm" className="flex-1">Create Content</Button>
                   </div>
@@ -131,33 +135,33 @@ export function ContentClustering() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Content Clusters Overview</CardTitle>
-            <CardDescription>Performance metrics by content grouping</CardDescription>
+            <CardTitle className={isRTL ? 'text-right' : ''}>Content Clusters Overview</CardTitle>
+            <CardDescription className={isRTL ? 'text-right' : ''}>Performance metrics by content grouping</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               {clusters.map((cluster, index) => (
                 <div key={cluster.name} className="border rounded-lg p-4 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
+                  <div className={`flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <div className={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                       <div className={`w-3 h-3 rounded-full ${cluster.color}`}></div>
-                      <div>
+                      <div className={isRTL ? 'text-right' : ''}>
                         <h4 className="font-medium">{cluster.name}</h4>
-                        <div className="flex gap-4 text-sm text-muted-foreground">
+                        <div className={`flex gap-4 text-sm text-muted-foreground ${isRTL ? 'flex-row-reverse' : ''}`}>
                           <span>{cluster.articles} articles</span>
                           <span>{cluster.traffic.toLocaleString()} views</span>
                         </div>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="flex items-center gap-1 text-green-600">
+                    <div className={`text-right ${isRTL ? 'text-left' : ''}`}>
+                      <div className={`flex items-center gap-1 text-green-600 ${isRTL ? 'flex-row-reverse' : ''}`}>
                         <TrendingUp className="h-3 w-3" />
                         <span className="text-sm font-medium">+{cluster.growth}%</span>
                       </div>
                       <div className="text-xs text-muted-foreground">{cluster.suggestions} suggestions</div>
                     </div>
                   </div>
-                  <div className="flex flex-wrap gap-1">
+                  <div className={`flex flex-wrap gap-1 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     {cluster.keywords.slice(0, 3).map((keyword) => (
                       <Badge key={keyword} variant="secondary" className="text-xs">{keyword}</Badge>
                     ))}

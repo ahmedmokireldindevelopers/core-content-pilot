@@ -29,19 +29,20 @@ const translations = {
     
     // Dashboard
     dashboardTitle: "Dashboard Overview",
-    totalContent: "Total Content",
-    activeCampaigns: "Active Campaigns", 
+    totalContent: "Content Clusters",
+    activeCampaigns: "Active content groups",
     conversionRate: "Conversion Rate",
     revenueThisMonth: "Revenue This Month",
-    recentActivity: "Recent Activity",
+    recentActivity: "Recent Auto-Assignments",
+    autoAssignments: "Auto-Assignments",
     
     // Content Clustering
     contentClusteringTitle: "Content Clustering",
-    smartClustering: "Smart Content Clustering",
+    smartClustering: "Smart content suggestions and cluster analytics",
     
     // Analytics
     analyticsTitle: "Analytics Dashboard",
-    performanceMetrics: "Performance Metrics",
+    performanceMetrics: "Traffic and conversion insights by content clusters",
     
     // Sales
     salesTitle: "Sales Segmentation",
@@ -70,19 +71,20 @@ const translations = {
     
     // Dashboard
     dashboardTitle: "نظرة عامة على لوحة التحكم",
-    totalContent: "إجمالي المحتوى",
-    activeCampaigns: "الحملات النشطة",
+    totalContent: "مجموعات المحتوى",
+    activeCampaigns: "مجموعات المحتوى النشطة",
     conversionRate: "معدل التحويل",
     revenueThisMonth: "الإيرادات هذا الشهر",
-    recentActivity: "النشاط الأخير",
+    recentActivity: "التعيينات التلقائية الأخيرة",
+    autoAssignments: "التعيينات التلقائية",
     
     // Content Clustering
     contentClusteringTitle: "تجميع المحتوى",
-    smartClustering: "تجميع المحتوى الذكي",
+    smartClustering: "اقتراحات المحتوى الذكية وتحليلات التجميع",
     
     // Analytics
     analyticsTitle: "لوحة التحليلات",
-    performanceMetrics: "مقاييس الأداء",
+    performanceMetrics: "رؤى حركة المرور والتحويل حسب مجموعات المحتوى",
     
     // Sales
     salesTitle: "تقسيم المبيعات",
