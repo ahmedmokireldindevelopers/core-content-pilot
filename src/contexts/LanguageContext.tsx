@@ -65,7 +65,7 @@ const translations = {
     aiGeneratedRecommendations: "AI-generated content recommendations based on cluster performance",
     contentClustersOverview: "Content Clusters Overview",
     performanceMetricsByGroup: "Performance metrics by content grouping",
-    autoCusterContent: "Auto-Cluster Content",
+    autoClusterContent: "Auto-Cluster Content",
     createCluster: "Create Cluster",
     viewDetails: "View Details",
     createContent: "Create Content",
@@ -85,7 +85,13 @@ const translations = {
     trafficTrends: "Traffic Trends",
     sixMonthPerformance: "6-month performance by top clusters",
     lastSixMonths: "Last 6 Months",
-    realTimeData: "Real-time Data"
+    realTimeData: "Real-time Data",
+    clusterAnalytics: "Cluster Analytics",
+    contentManagement: "Content Management",
+    performanceInsights: "Performance Insights",
+    automatedWorkflow: "Automated Workflow",
+    clientManagement: "Client Management",
+    dataVisualization: "Data Visualization"
   },
   ar: {
     // App title
@@ -142,7 +148,7 @@ const translations = {
     aiGeneratedRecommendations: "توصيات المحتوى المولدة بالذكاء الاصطناعي بناءً على أداء المجموعات",
     contentClustersOverview: "نظرة عامة على مجموعات المحتوى",
     performanceMetricsByGroup: "مقاييس الأداء حسب تجميع المحتوى",
-    autoCusterContent: "تجميع المحتوى تلقائياً",
+    autoClusterContent: "تجميع المحتوى تلقائياً",
     createCluster: "إنشاء مجموعة",
     viewDetails: "عرض التفاصيل",
     createContent: "إنشاء محتوى",
@@ -162,7 +168,13 @@ const translations = {
     trafficTrends: "اتجاهات الزيارات",
     sixMonthPerformance: "الأداء لمدة 6 أشهر حسب أفضل المجموعات",
     lastSixMonths: "آخر 6 أشهر",
-    realTimeData: "بيانات في الوقت الفعلي"
+    realTimeData: "بيانات في الوقت الفعلي",
+    clusterAnalytics: "تحليلات المجموعات",
+    contentManagement: "إدارة المحتوى",
+    performanceInsights: "رؤى الأداء",
+    automatedWorkflow: "سير العمل الآلي",
+    clientManagement: "إدارة العملاء",
+    dataVisualization: "تصور البيانات"
   }
 };
 
