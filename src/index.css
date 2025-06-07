@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -99,5 +100,48 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* RTL Support */
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  .rtl .flex {
+    flex-direction: row-reverse;
+  }
+  
+  .rtl .sidebar {
+    border-left: 1px solid hsl(var(--border));
+    border-right: none;
+  }
+  
+  .rtl .justify-start {
+    justify-content: flex-end;
+  }
+  
+  .rtl .text-left {
+    text-align: right;
+  }
+  
+  .rtl .ml-auto {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  .rtl .mr-auto {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  
+  .rtl .pl-10 {
+    padding-left: 0.75rem;
+    padding-right: 2.5rem;
+  }
+  
+  .rtl .absolute.left-3 {
+    left: auto;
+    right: 0.75rem;
   }
 }

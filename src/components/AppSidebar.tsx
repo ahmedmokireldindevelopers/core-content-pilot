@@ -21,50 +21,53 @@ import {
   SidebarMenuItem,
   SidebarHeader,
 } from "@/components/ui/sidebar";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface AppSidebarProps {
   activeModule: string;
   setActiveModule: (module: string) => void;
 }
 
-const menuItems = [
-  {
-    title: "Dashboard",
-    icon: Home,
-    key: "dashboard",
-  },
-  {
-    title: "Content Clustering",
-    icon: Brain,
-    key: "content",
-  },
-  {
-    title: "Analytics",
-    icon: BarChart3,
-    key: "analytics",
-  },
-  {
-    title: "Sales Segmentation",
-    icon: Target,
-    key: "sales",
-  },
-  {
-    title: "Auto Assignments",
-    icon: UserCheck,
-    key: "assignments",
-  },
-];
-
 export function AppSidebar({ activeModule, setActiveModule }: AppSidebarProps) {
+  const { t } = useLanguage();
+
+  const menuItems = [
+    {
+      title: t("dashboard"),
+      icon: Home,
+      key: "dashboard",
+    },
+    {
+      title: t("contentClustering"),
+      icon: Brain,
+      key: "content",
+    },
+    {
+      title: t("analytics"),
+      icon: BarChart3,
+      key: "analytics",
+    },
+    {
+      title: t("salesSegmentation"),
+      icon: Target,
+      key: "sales",
+    },
+    {
+      title: t("autoAssignments"),
+      icon: UserCheck,
+      key: "assignments",
+    },
+  ];
+
   return (
     <Sidebar className="border-r">
       <SidebarHeader className="p-6">
-        <h2 className="text-xl font-bold text-foreground">Content Pilot</h2>
-        <p className="text-sm text-muted-foreground">Smart CRM Platform</p>
+        <h2 className="text-xl font-bold text-foreground">{t("appTitle")}</h2>
+        <p className="text-sm text-muted-foreground">{t("appSubtitle")}</p>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Core Modules</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("coreModules")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (

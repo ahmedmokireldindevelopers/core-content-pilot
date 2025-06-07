@@ -9,8 +9,11 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Checkbox } from "@/components/ui/checkbox";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function UniversalSearch() {
+  const { t } = useLanguage();
   const activeFilters = ["Technology", "Q4 2024", "High Priority"];
   
   return (
@@ -19,7 +22,7 @@ export function UniversalSearch() {
         <div className="relative flex-1 max-w-lg">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Search across all modules, clients, content..."
+            placeholder={t("searchPlaceholder")}
             className="pl-10"
           />
         </div>
@@ -28,10 +31,10 @@ export function UniversalSearch() {
           <PopoverTrigger asChild>
             <Button variant="outline" size="sm" className="gap-2">
               <SlidersHorizontal className="h-4 w-4" />
-              Filters
+              {t("filters")}
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-80">
+          <PopoverContent className="w-80 bg-popover">
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium mb-2">Content Clusters</h4>
@@ -67,6 +70,8 @@ export function UniversalSearch() {
             </Badge>
           ))}
         </div>
+
+        <LanguageSwitcher />
       </div>
     </div>
   );
